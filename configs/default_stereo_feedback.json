@@ -4,7 +4,7 @@
     "model_name": "base",
     "loss_name": "base",
     "trainer_name": "default",
-    "dataset_path": "/media/raaj/Storage/kitti/",
+    "dataset_path": "./kitti/",
     "dataset_split": "./kittiloader/k1/"
   },
   "var": {

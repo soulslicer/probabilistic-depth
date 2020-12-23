@@ -2,9 +2,16 @@
 
 ## About
 
+This code predicts depth from RGB images. But instead of producing depth alone, it produces a multimodal depth distribution for each pixel, in the form of a categorical distribution. This is useful for weeding out uncertain 3d points, or in downstream adaptive depth sensing tasks. We solve the task of Monocular, Stereo and Lidar Upsampling based depth estimation using the same architecture. 
+
 ## Installation
 
 ```
+- Download Kitti
+    # Download from http://www.cvlibs.net/datasets/kitti/raw_data.php
+    # Use the raw_kitti_downloader script
+    # Link kitti to a folder in this project folder
+    ln -s {absolute_kitti_path} kitti
 - Install Python Deps
     torch, matplotlib, numpy, cv2, pykitti, tensorboardX
 - Compile external deps
@@ -24,18 +31,24 @@
 ```
 # Eval
 - Moving Monocular Depth Estimation
-    python3 train.py --config configs default_mono.json --eval --viz
+    python3 train.py --config configs/default_mono.json --eval --viz
 - Moving Monocular Depth Estimation with Feedback
-    python3 train.py --config configs default_mono_feedback.json --eval --viz
-- Moving Stereo Depth Estimation
-    python3 train.py --config configs default_stereo.json --eval --viz
-- Moving Stereo Depth Estimation with Feedback
-    python3 train.py --config configs default_stereo_feedback.json --eval --viz
+    python3 train.py --config configs/default_mono_feedback.json --eval --viz
+- Stereo Depth Estimation
+    python3 train.py --config configs/default_stereo.json --eval --viz
+- Stereo Depth Estimation with Feedback
+    python3 train.py --config configs/default_stereo_feedback.json --eval --viz
 - Moving Monocular Lidar Upsampling
-    python3 train.py --config configs default_mono_upsample.json --eval --viz
+    python3 train.py --config configs/default_mono_upsample.json --eval --viz
 
 # Training
     Training only works with Python 3 as it uses distributed training
     To train, simply remove the eval and viz flags. Use the `batch_size` flag to change batch size. It automatically splits it among the GPUs available
     `pkill -f -multi` to clear memory if crashes
+```
+
+## References
+
+```
+Uses code from https://github.com/lliuz/ARFlow (ARFlow) and https://github.com/NVlabs/neuralrgbd (NeuralRGBD)
 ```
