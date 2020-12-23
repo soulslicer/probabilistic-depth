@@ -13,7 +13,9 @@ Stereo
 Upsampling
 ![Upsampling](https://github.com/soulslicer/probabilistic-depth/blob/main/pics/upsample.gif?raw=true)
 
-![Upsampling](https://github.com/soulslicer/probabilistic-depth/blob/main/pics/ptcloud_stereo.gif?raw=true)
+Stereo Cloud
+
+![Stereo Cloud](https://github.com/soulslicer/probabilistic-depth/blob/main/pics/ptcloud_stereo.gif?raw=true)
 
 ## Explanation
 
