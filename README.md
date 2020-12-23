@@ -17,7 +17,7 @@ Upsampling
 
 ## Explanation
 
-Neural RGBD introduced the world to Depth Probability Fields (DPV). Instead of predicting depth per pixel, we predict a distribution per pixel. To help us visualize the uncertainty, we collapsed the distribution along the surface of the road so that you can visualize the Uncertainty Field (UF).
+Neural RGBD introduced the world to Depth Probability Fields (DPV). We build off that idea and produce an easy to understand and extend code. Instead of predicting depth per pixel, we predict a distribution per pixel. To help us visualize the uncertainty, we collapsed the distribution along the surface of the road so that you can visualize the Uncertainty Field (UF).
 
 <img src="https://raw.githubusercontent.com/soulslicer/probabilistic-depth/main/pics/image1.png" width="500" height="300" />
 
@@ -63,6 +63,10 @@ Neural RGBD introduced the world to Depth Probability Fields (DPV). Instead of p
     To train, simply remove the eval and viz flags. Use the `batch_size` flag to change batch size. It automatically splits it among the GPUs available
     `pkill -f -multi` to clear memory if crashes
 ```
+
+## Math?
+
+Coming soon. Disclaimer: This is a template code that I have written to extend some research I am working on. Please be sure to cite this if you use this code
 
 ## References
 
