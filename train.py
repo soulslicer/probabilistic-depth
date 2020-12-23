@@ -21,7 +21,7 @@ def worker(id, args): pass
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('-c', '--config', default='configs/default.json')
+    parser.add_argument('-c', '--config', default='configs/default_mono.json')
     parser.add_argument('-b', '--batch_size', default=8, type=int)
     parser.add_argument('--viz', action='store_true', help='viz', default=False)
     parser.add_argument('--eval', action='store_true', help='viz', default=False)
