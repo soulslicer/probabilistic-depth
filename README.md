@@ -22,6 +22,20 @@
 ## Running
 
 ```
+# Eval
 - Moving Monocular Depth Estimation
-    
+    python3 train.py --config configs default_mono.json --eval --viz
+- Moving Monocular Depth Estimation with Feedback
+    python3 train.py --config configs default_mono_feedback.json --eval --viz
+- Moving Stereo Depth Estimation
+    python3 train.py --config configs default_stereo.json --eval --viz
+- Moving Stereo Depth Estimation with Feedback
+    python3 train.py --config configs default_stereo_feedback.json --eval --viz
+- Moving Monocular Lidar Upsampling
+    python3 train.py --config configs default_mono_upsample.json --eval --viz
+
+# Training
+    Training only works with Python 3 as it uses distributed training
+    To train, simply remove the eval and viz flags. Use the `batch_size` flag to change batch size. It automatically splits it among the GPUs available
+    `pkill -f -multi` to clear memory if crashes
 ```
