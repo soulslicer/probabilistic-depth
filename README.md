@@ -2,7 +2,25 @@
 
 ## About
 
-This code predicts depth from RGB images. But instead of producing depth alone, it produces a multimodal depth distribution for each pixel, in the form of a categorical distribution. This is useful for weeding out uncertain 3d points, or in downstream adaptive depth sensing tasks. We solve the task of Monocular, Stereo and Lidar Upsampling based depth estimation using the same architecture. 
+This code predicts depth from RGB images. But instead of producing depth alone, it produces a multimodal depth distribution for each pixel, in the form of a categorical distribution. This is useful for weeding out uncertain 3d points, or in downstream adaptive depth sensing tasks. We solve the task of Monocular, Stereo and Lidar Upsampling based depth estimation using the same architecture.
+
+Monocular
+![Monocular](https://github.com/soulslicer/probabilistic-depth/blob/main/pics/mono.gif?raw=true)
+
+Stereo
+![Stereo](https://github.com/soulslicer/probabilistic-depth/blob/main/pics/stereo.gif?raw=true)
+
+Upsampling
+![Upsampling](https://github.com/soulslicer/probabilistic-depth/blob/main/pics/upsample.gif?raw=true)
+
+Stereo Pointcloud
+![Upsampling](https://github.com/soulslicer/probabilistic-depth/blob/main/pics/ptcloud_stereo.gif?raw=true)
+
+## Explanation
+
+Neural RGBD introduced the world to Depth Probability Fields (DPV). Instead of predicting depth per pixel, we predict a distribution per pixel. To help us visualize the uncertainty, we collapsed the distribution along the surface of the road so that you can visualize the Uncertainty Field (UF).
+
+![Upsampling](https://github.com/soulslicer/probabilistic-depth/blob/main/pics/image1.png?raw=true)
 
 ## Installation
 
