@@ -1,0 +1,67 @@
+{
+  "data": {
+    "exp_name": "default_stereo",
+    "model_name": "base",
+    "loss_name": "base",
+    "trainer_name": "default",
+    "dataset_path": "/media/raaj/Storage/kitti/",
+    "dataset_split": "./kittiloader/k1/"
+  },
+  "var": {
+    "sigma_soft_max": 10.0,
+    "t_win": 1,
+    "d_min": 5.0,
+    "d_max": 40.0,
+    "feature_dim": 64,
+    "ndepth": 64,
+    "softce": 0.3,
+    "qpower": 1.0,
+    "viz": false,
+    "img_size": [768, 256],
+    "crop_w": 384,
+    "pnoise": 0.0,
+    "mload": true,
+    "nmode": "default",
+    "bn_avg": true,
+    "stereo": true
+  },
+  "lidar": {
+    "enabled": false
+  },
+  "lc": {
+    "enabled": false
+  },
+  "loss": {
+    "ce_mul": 1.0,
+    "dsc_mul": 1.0,
+    "rsc_mul": 1.0,
+    "smooth_mul": 0.5,
+    "dc_mul": 0.25,
+    "rsc_low_mul": 0.0
+  },
+  "train": {
+    "batch_size": 8,
+    "beta": 0.999,
+    "epoch_num": 60,
+    "lr": 1e-5,
+    "momentum": 0.9,
+    "n_gpu": 4,
+    "optim": "adam",
+    "bias_decay": 0,
+    "weight_decay": 1e-06,
+    "halflr": [30, 50],
+    "pretrained_model": null,
+    "print_freq": 10,
+    "record_freq": 50,
+    "save_epoch": 1,
+    "val_epoch_size": 1
+  },
+  "mp": {
+    "enabled": true,
+    "master_addr": "localhost",
+    "master_port": 8080,
+    "workers": 4
+  },
+  "seed": 0,
+  "eval": false
+}
